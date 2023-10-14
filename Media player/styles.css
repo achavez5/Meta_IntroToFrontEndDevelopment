@@ -1,0 +1,8 @@
+iframe {
+    width: auto; 
+    height: auto;
+    max-width: 1280;
+    max-height: 720;
+    margin: auto;
+    padding: 40px;
+}
