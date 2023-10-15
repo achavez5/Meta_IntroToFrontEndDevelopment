@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name ="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Sign up</title>
+        <meta name="description" content="A sign up page">
+        <meta name="author" content="Chavez Development Media">
+
+        <!-- Open Graph Protocol -->
+        <!-- 
+        <meta property="og:title" content="Sign up">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.mysite">
+        <meta property="og:description" content="A sign up page">
+        <meta property="og:image" content="image.png">
+        -->
+
+        <link rel="icon" href="logo.png">
+        <!-- icon stuffs
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        -->
+
+        <!-- Include your CSS files here -->
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <header>
+            <!-- Add your website name or logo here -->
+            <img src="logo.png" alt="Chavez Development Media logo">
+            <p>Template sign up site</p>
+        </header>
+        <nav>
+            <!-- Add your website navigation here -->
+            <!--
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            -->
+        </nav>
+        <main>
+            <!-- Add your main content here -->
+            <h1>Sign Up</h1>
+            <form action="POST">
+                <div>
+                    <label for="userFirstName">First name</label><br>
+                    <input type="text" name="userFirstName" id="userFirstName">
+                </div>
+                <div>
+                    <label for="userLastName">Last name</label><br>
+                    <input type="text" name="userLastName" id="userLastName">
+                </div>
+                <div>
+                    <label for="userEmail">Email</label><br>
+                    <input type="email" name="userEmail" id="userEmail">
+                </div>
+                <div>
+                    <label for="userPassword">Password</label><br>
+                    <input type="password" name="userPassword" id="userPassword">
+                </div>
+                <div>
+                    <label for="userConfimPassword">Confirm password</label><br>
+                    <input type="password" name="userConfirmPassword" id="userConfirmPassword">
+                </div>
+                    <button type="submit">Sign Up</button>
+                </div>
+            </form>
+        </main>
+        <footer>
+            <!-- Add copyright notices and other footer content here-->
+            <p>Copyright Chavez Development Media</p>
+        </footer>
+        <script src="scripts/script.js"></script>
+    </body>
+</html>
