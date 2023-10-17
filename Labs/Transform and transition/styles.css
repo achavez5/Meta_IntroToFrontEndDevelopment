@@ -31,12 +31,12 @@
 
 /* Add rules for steps 8 and 9 */
 .letters:hover p:nth-child(even) {
-	transform: rotateY(360deg);
+	transform: rotateY(360deg) skew(10deg);
 	transition: 0.5s;
 }
 
 .letters:hover p:nth-child(odd){
-	transform: rotateX(360deg);
+	transform: rotateX(360deg) skew(-10deg);
 	transition: 1.5s;
 }
 
