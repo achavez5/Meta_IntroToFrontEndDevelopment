@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta name ="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Template layout</title>
-        <meta name="description" content="A brief description">
+        <title>Hair Day</title>
+        <meta name="description" content="Hair Day Salon - Madison WI">
         <meta name="author" content="Chavez Development Media">
 
         <!-- Open Graph Protocol -->
@@ -18,33 +18,48 @@
         -->
 
         <!-- icon stuffs -->
-        <link rel="icon" href="/logo.png">
+        <link rel="icon" href="images/Artboard 19.png">
         <link rel="icon" href="/favicon.svg" type="image/svg+xml">
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
         <!-- Include your CSS files here -->
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <style>
+            html {
+                font-family: Roboto, serif;
+            }
+        </style>
     </head>
     <body>
-        <header>
-            <img src="./Images/Artboard 1.png" alt="">
-        </header>
-        <nav>
-            <ul>
-                <li>Link 1</li>
-                <li>Link 2</li>
-                <li>Link 3</li>
-                <li>Link 4</li>
-            </ul>
-        </nav>
-        <main>
-            <!-- Add your main content here -->
-            <h1>Template heading</h1>
-        </main>
-        <footer>
-            <!-- Add copyright notices and other footer content here-->
-            <p>Footer</p>
-        </footer>
-        <script src="scripts/script.js"></script>
+        <div class="container">
+            <header>
+                <img src="./Images/Artboard 1.png" alt="Hair day logo" class="headerImage desktopLogo">
+                <img src="./Images/Artboard 22.png" alt="Hair day logo" class="headerImage mobileLogo"> 
+            </header>
+            <nav>
+                <ul class="navbar">
+                    <li class="navItem"><a href="./index.html">Home</a></li>
+                    <li class="navItem"><a href="./index.html">Services</a></li>
+                    <li class="navItem"><a href="./index.html">Hair care</a></li>
+                    <li class="navItem"><a href="./index.html">About</a></li>
+                </ul>
+            </nav>
+            <main>
+                <!-- Add your main content here -->
+                <div class="promo" id="promo"></div>
+                <div class="info" id="info">
+                    <div class="subInfo" id="leftInfo"></div>
+                    <div class="subInfo" id="middleInfo"></div>
+                    <div class="subInfo" id="rightInfo"></div>
+                </div>
+            </main>
+            <footer>
+                <!-- Add copyright notices and other footer content here-->
+                <div class="footer footerLeft" id="footerLeft"></div>
+                <div class="footer footerRight" id="footerRight"></div>
+            </footer>
+        </div>
+        <script src="./script.js"></script>
     </body>
 </html>
