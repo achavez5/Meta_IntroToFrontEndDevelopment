@@ -122,14 +122,14 @@ footer img {
 #footerLeft {
     display: flex;
     grid-area: footerLeft;
-    background-color: rgb(52, 152, 219); 
 
 }
 
 #footerRight {
     display: flex;
     grid-area: footerRight;
-    background-color: rgb(41, 128, 185);
+    color: rgba(0, 0, 0, 50%);
+    font-size: 0.75rem;
 }
 
 #footerRight p {
