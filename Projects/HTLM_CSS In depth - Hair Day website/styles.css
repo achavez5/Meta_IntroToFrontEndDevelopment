@@ -6,7 +6,7 @@
     display: grid;
     max-width: 100vw;
     grid-template-columns: 100%;
-    grid-template-rows: .5fr .25fr 5fr 0.5fr;
+    grid-template-rows: .5fr .25fr 5fr 1fr;
     grid-template-areas: 
         "header" 
         "nav"
@@ -82,6 +82,16 @@ section {
 
 footer {
     background-color: rgb(189, 195, 199);
+    padding: 10px;
+    padding-bottom: 0;
+
+    display: grid; 
+    grid-area: footer;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 10px;
+    grid-template-areas: 
+        "footerLeft footerRight"
 }
 
 .promo {
@@ -104,20 +114,25 @@ footer {
     background-color: rgb(127, 140, 141);
 }
 
-.footer {
-    background-color: pink;
+#footerLeft {
+    grid-area: footerLeft;
+    background-color: rgb(52, 152, 219);
+}
+
+#footerRight {
+    grid-area: footerRight;
+    background-color: rgb(41, 128, 185);
 }
 
 /* Mobile first development -- below is for anything bigger than a mobile phone */
 @media (min-width: 450px) { 
     .container {
-        grid-template-rows: 1fr .25fr 5fr 0.5fr;
+        grid-template-rows: 1fr .25fr 5fr 1fr;
         grid-template-areas: 
             "header"
             "nav"
             "main"
             "footer";
-        row-gap: 10px;
     }
     
     .desktopLogo {
@@ -152,6 +167,7 @@ footer {
         grid-template-rows: 2fr 2fr;
         column-gap: 10px;
         padding: 10px;
+        padding-bottom: 0;
         grid-template-areas: 
             "promo promo promo" 
             "leftInfo middleInfo rightInfo"
