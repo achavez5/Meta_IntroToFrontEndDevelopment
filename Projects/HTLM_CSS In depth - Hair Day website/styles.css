@@ -80,20 +80,6 @@ section {
         "rightInfo";
 }
 
-footer {
-    background-color: rgb(189, 195, 199);
-    padding: 10px;
-    padding-bottom: 0;
-
-    display: grid; 
-    grid-area: footer;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    column-gap: 10px;
-    grid-template-areas: 
-        "footerLeft footerRight"
-}
-
 .promo {
     background-color: rgb(44, 62, 80);
     grid-area: promo; 
@@ -114,14 +100,40 @@ footer {
     background-color: rgb(127, 140, 141);
 }
 
+footer {
+    background-color: rgb(189, 195, 199);
+    padding: 10px;
+    padding-bottom: 0;
+
+    display: grid; 
+    grid-area: footer;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 10px;
+    grid-template-areas: 
+        "footerLeft footerRight"
+}
+
+footer img {
+    max-width: 25%;
+    margin: auto;
+}
+
 #footerLeft {
+    display: flex;
     grid-area: footerLeft;
-    background-color: rgb(52, 152, 219);
+    background-color: rgb(52, 152, 219); 
+
 }
 
 #footerRight {
+    display: flex;
     grid-area: footerRight;
     background-color: rgb(41, 128, 185);
+}
+
+#footerRight p {
+    margin: auto;
 }
 
 /* Mobile first development -- below is for anything bigger than a mobile phone */
