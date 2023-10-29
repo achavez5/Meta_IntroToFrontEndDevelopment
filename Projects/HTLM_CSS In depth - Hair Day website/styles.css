@@ -60,7 +60,7 @@ nav .navbar .navItem {
 }
 
 main {
-    background-color: darkgrey;
+    background-color: rgb(189, 195, 199);
     grid-area: main;
     display: grid; 
     grid-template-columns: 1fr;
@@ -81,27 +81,27 @@ section {
 }
 
 footer {
-    background-color: purple;
+    background-color: rgb(189, 195, 199);
 }
 
 .promo {
-    background-color: green;
+    background-color: rgb(44, 62, 80);
     grid-area: promo; 
 }
 
 #leftInfo {
     grid-area: leftInfo;
-    background-color: blue;
+    background-color: rgb(44, 62, 80);
 }
 
 #middleInfo {
     grid-area: middleInfo;
-    background-color: blueviolet;
+    background-color: rgb(149, 165, 166)
 }
 
 #rightInfo {
     grid-area: rightInfo;
-    background-color: red;
+    background-color: rgb(127, 140, 141);
 }
 
 .footer {
