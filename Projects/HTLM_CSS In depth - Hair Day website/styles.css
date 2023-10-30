@@ -2,11 +2,12 @@
     margin: 0; 
     padding: 0;
 }
+
 .container {
     display: grid;
     max-width: 100vw;
     grid-template-columns: 100%;
-    grid-template-rows: .5fr .25fr 5fr 1fr;
+    grid-template-rows: .5fr .25fr 5fr 0.25fr;
     grid-template-areas: 
         "header" 
         "nav"
@@ -60,19 +61,17 @@ nav .navItem {
 }
 
 main {
-    background-color: rgb(189, 195, 199);
     grid-area: main;
     display: grid; 
     grid-template-columns: 1fr;
     grid-template-areas: "articles";
 }
 
-section {
+.articles {
     display: grid;
     grid-area: articles;
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
     grid-template-rows: 2fr 1fr 1fr 1fr;
-    row-gap: 10px;
     grid-template-areas: 
         "promo" 
         "leftInfo"
@@ -81,23 +80,64 @@ section {
 }
 
 .promo {
-    background-color: rgb(44, 62, 80);
-    grid-area: promo; 
+    background-color: rgb(236, 240, 241);
+    grid-area: promo;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "promoLeft"
+        "promoRight";
+}
+
+#promoLeft {
+    grid-area: promoLeft;
+    display: flex;
+}
+
+#promoLeft img {
+    max-width: 100%;
+    object-fit: cover;
+    height: auto;
+}
+
+#promoRight {
+    grid-area: promoRight;
+    display: flex;
+}
+
+.card {
+    margin: auto;
+}
+
+.card * {
+    padding: 5%
+}
+
+#promoRight h1 {
+    font-size: 2em;
+}
+
+.subInfo {
+    display: flex;
+    border-top: solid 1px rgba(209, 97, 76, 5%);
+}
+
+.subInfo:last-child {
+    border-right: none;
+    
 }
 
 #leftInfo {
     grid-area: leftInfo;
-    background-color: rgb(44, 62, 80);
 }
 
 #middleInfo {
     grid-area: middleInfo;
-    background-color: rgb(149, 165, 166)
 }
 
 #rightInfo {
     grid-area: rightInfo;
-    background-color: rgb(127, 140, 141);
 }
 
 footer {
@@ -135,10 +175,16 @@ footer img {
     margin: auto;
 }
 
-/* Mobile first development -- below is for anything bigger than a mobile phone */
+/**
+###################################
+        MEDIA QUERIES
+###################################
+*/
+
 @media (min-width: 450px) { 
     .container {
-        grid-template-rows: 1fr .25fr 5fr 1fr;
+        grid-template-rows: 1fr .25fr 5fr 0.5fr;
+        row-gap: 10px;
         grid-template-areas: 
             "header"
             "nav"
@@ -170,18 +216,41 @@ footer img {
     .navbar .navItem:last-child {
         border-right: none; 
     }
+
+    .promo {
+        display: grid; 
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        column-gap: 10px;
+        grid-template-areas: "promoLeft promoRight";
+    }
     
 }
 
 @media (min-width: 850px) {
-    section {
+    .articles {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 2fr 2fr;
-        column-gap: 10px;
         padding: 10px;
         padding-bottom: 0;
         grid-template-areas: 
             "promo promo promo" 
             "leftInfo middleInfo rightInfo"
+    }
+
+    .subCard {
+        border-right: solid 1px rgba(209, 97, 76, 20%);
+    }
+    
+    .rightInfo > .subCard {
+        border-right: none;
+    }
+
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+        margin: auto;
     }
 }
