@@ -101,9 +101,9 @@ section {
 }
 
 footer {
-    background-color: rgb(189, 195, 199);
     padding: 10px;
-    padding-bottom: 0;
+    padding-bottom: 10px;
+    opacity: 0.5;
 
     display: grid; 
     grid-area: footer;
@@ -114,15 +114,14 @@ footer {
         "footerLeft footerRight"
 }
 
-footer img {
-    max-width: 25%;
-    margin: auto;
-}
-
 #footerLeft {
     display: flex;
     grid-area: footerLeft;
+}
 
+footer img {
+    max-width: 50%;
+    margin: auto;
 }
 
 #footerRight {
