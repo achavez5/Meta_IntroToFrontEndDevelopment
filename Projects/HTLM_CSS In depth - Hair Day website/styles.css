@@ -3,11 +3,15 @@
     padding: 0;
 }
 
+underline {
+    text-decoration: underline;
+}
+
 .container {
     display: grid;
     max-width: 100vw;
     grid-template-columns: 100%;
-    grid-template-rows: .5fr .25fr 5fr 0.25fr;
+    grid-template-rows: .25fr .25fr 5fr 0.25fr;
     grid-template-areas: 
         "header" 
         "nav"
@@ -43,6 +47,7 @@ nav .navItem {
     padding: 10px 10px;
     background-color: rgb(236, 240, 241);
     border-top: solid 1px rgba(209, 97, 76, 5%);
+    height: 100%;
 }
 
 .navItem:first-child {
@@ -79,15 +84,18 @@ main {
         "rightInfo";
 }
 
+.articles * {
+    max-width: 100%
+}
+
 .promo {
-    background-color: rgb(236, 240, 241);
     grid-area: promo;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 
-        "promoLeft"
-        "promoRight";
+        "promoRight"
+        "promoLeft";
 }
 
 #promoLeft {
@@ -111,7 +119,11 @@ main {
 }
 
 .card * {
-    padding: 5%
+    padding: 2.5%;
+}
+
+.card h2 {
+    font-weight: bolder;
 }
 
 #promoRight h1 {
@@ -138,6 +150,22 @@ main {
 
 #rightInfo {
     grid-area: rightInfo;
+}
+
+.gallery {
+    max-width: fit-content;
+    overflow-x: scroll; 
+    white-space: nowrap;
+}
+
+.photos {
+    display: inline-block; 
+    padding: 10px;
+}
+
+.photos img {
+    max-width: 100%;
+    height: auto; 
 }
 
 footer {
@@ -218,6 +246,7 @@ footer img {
     }
 
     .promo {
+        background-color: rgb(236, 240, 241);
         display: grid; 
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
@@ -231,8 +260,6 @@ footer img {
     .articles {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 2fr 2fr;
-        padding: 10px;
-        padding-bottom: 0;
         grid-template-areas: 
             "promo promo promo" 
             "leftInfo middleInfo rightInfo"
@@ -245,9 +272,7 @@ footer img {
     .rightInfo > .subCard {
         border-right: none;
     }
-
 }
-
 @media (min-width: 1280px) {
     .container {
         max-width: 1280px;
